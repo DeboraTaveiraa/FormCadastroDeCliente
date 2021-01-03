@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro de Clientes</title>
+
+    <link rel="stylesheet" href="/public/style/main.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Cadastro de Clientes</h1>
+        </header>
+    
+        <form>
+            
+            <div class="input">
+                <label for="name">Nome</label>
+                <input type="text" id="name">
+            </div>
+    
+            <div class="input">
+                <label for="email">E-mail</label>
+                <input type="email" id="email">
+            </div>
+            
+            <div class="input radio">
+                <input onclick="selecionarRadio()" type="radio" id="cpf" name="btRadio" value="cpf">
+                <label for="cpf">CPF</label>
+            </div>
+    
+            <div class="input radio">
+                <input onclick="selecionarRadio()" type="radio" id="cnpj" name="btRadio" value="cnpj">
+                <label for="cnpj">CNPJ</label>
+            </div>
+    
+            <div class="input">
+                <input placeholder="000.000.000-00" type="text" id="in_cpf" hidden>
+                <input placeholder="XX.XXX.XXX/0001-XX" type="text" id="in_cnpj" hidden>
+            </div>
+    
+            <div class="input">
+                <label for="fone">Telefone</label>
+                <input type="text" id="fone">
+            </div>
+    
+            <div class="input">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep">
+            </div>
+    
+            <div class="input">
+                <label for="logradouro">Logradouro</label>
+                <input type="text" id="logradouro">
+            </div>
+    
+            <div class="input">
+                <label for="numero">Número</label>
+                <input type="text" id="numero">
+            </div>
+    
+            <div class="input">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro">
+            </div>
+    
+            <div class="input">
+                <label for="city">Cidade</label>
+                <input type="text" id="city">
+            </div>
+    
+            <div class="input">
+                <label for="state">Estado</label>
+                <input type="text" id="state">
+            </div>
+            
+            <div id="submit">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+
+
+
+    <script>
+        function selecionarRadio() {
+            const rd_cpf = document.getElementById('cpf');
+            const rd_cnpj = document.getElementById('cnpj');
+            var in_cpf = document.getElementById('in_cpf');
+            var in_cnpj = document.getElementById('in_cnpj');
+            
+            if(rd_cpf.checked == true) {
+                in_cpf.style.display = "block";
+            }
+            else {
+                in_cpf.style.display = "none";
+            }
+
+            if (rd_cnpj.checked == true) {
+                in_cnpj.style.display = "block";
+            }
+            else {
+                in_cnpj.style.display = "none";
+            }
+        }   
+    </script>
+</body>
+</html>
