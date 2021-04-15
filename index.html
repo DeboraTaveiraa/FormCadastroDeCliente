@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Formulário de Cadastro de Clientes</title>
-
-    <link rel="stylesheet" href="/public/style/main.css">
 </head>
 <body>
     <main>
@@ -76,34 +75,32 @@
             </div>
             
             <div id="submit">
-                <button type="submit">Enviar</button>
+                <button type="button" id="btnSubmit" onclick="alert('Cadastro realizado com sucesso!')">Enviar</button>
             </div>
         </form>
     </main>
-
-
-
     <script>
         function selecionarRadio() {
-            const rd_cpf = document.getElementById('cpf');
-            const rd_cnpj = document.getElementById('cnpj');
+            const cpf = document.getElementById('cpf');
+            const cnpj = document.getElementById('cnpj');
             var in_cpf = document.getElementById('in_cpf');
             var in_cnpj = document.getElementById('in_cnpj');
             
-            if(rd_cpf.checked == true) {
+            if(cpf.checked == true) {
                 in_cpf.style.display = "block";
             }
             else {
                 in_cpf.style.display = "none";
             }
 
-            if (rd_cnpj.checked == true) {
+            if (cnpj.checked == true) {
                 in_cnpj.style.display = "block";
             }
             else {
                 in_cnpj.style.display = "none";
             }
-        }   
+        }
     </script>
+
 </body>
 </html>

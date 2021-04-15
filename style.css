@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #C3FBF4;
+    background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +55,7 @@ form div label {
 form div input {
     margin: 5px 50px;
     border: 1px solid;
-    border-color: #fff #fff #C3FBF4 #fff;
+    border-color: #fff #fff #5684AE #fff;
     line-height: 30px;
     padding: 5px 15px;
     font-family: 'Roboto', sans-serif;
